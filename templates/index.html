@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CCIS</title>
+
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font-Awesome -->
+    <link href="/static/assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Lightcase -->
+    <link href="/static/assets/css/lightcase.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link href="/static/assets/css/swiper.min.css" rel="stylesheet">
+
+    <!-- Animate -->
+    <link href="/static/assets/css/animate.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="/static/assets/css/style.css" rel="stylesheet">
+
+    <!-- Responsive -->
+    <link href="/static/assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/css/page.css"/>
+    <link rel="stylesheet" href="/static/assets/css/global.css"/>
+
+
+</head>
+<body data-spy="scroll">
+<!-- Preloader start here -->
+<div class="preloader">
+    <div class="loader">
+        <div class="ld-child"></div>
+        <div class="ld-child ld-child2"></div>
+    </div>
+</div>
+<!-- Preloader end here -->
+
+{% include 'include/header.html' %}
+
+
+<section id="banner" class="banner">
+    <div class="overlay">
+        <div class="banner-content">
+            <h3>欢迎加入CCIS社团</h3>
+            <a href="/register" class="default-button page-scroll">Join us</a>
+        </div><!-- banner content -->
+    </div><!-- overlay -->
+</section>
+
+
+<!-- about section start -->
+<section id="about" class="about-us padding-120">
+    <div class="container">
+        <div class="section-header text-center">
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="about-image">
+                    <img src="/static/images/about.jpg" alt="about image" style="height: 300px">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h3>简介</h3>
+                <p>
+                    本社创建2021年11月。这里是颜值与才华并存传统与创意齐飞的社团。社团专注于项目开发与服务宣传，不仅可以学到程序与网站的制作，而且社团还专注于各类的比赛的培训。竞赛项目有：大数据挑战赛，openstack云计算比赛，ctf网络安全比赛，振兴杯，华为ICT比赛等等</p>
+            </div>
+        </div>
+    </div><!-- row -->
+    </div><!-- container -->
+</section>
+<!-- about section end -->
+
+
+<!-- services section start -->
+<section id="pricing" class="pricing padding-120 bg-color">
+    <div class="container">
+        <div class="section-header text-center">
+            <h3>社团公告</h3>
+        </div>
+
+        <div class="row">
+            {% for notice in notices %}
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="pricing-item">
+                    <div class="options">
+                        <h3>{{ notice.name }}</h3>
+                        <p>{{ notice.dates}}</p>
+                    </div>
+                    <a href="/rule/{{ notice.id }}/">详情</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+<!-- services section end -->
+
+
+<!-- skills section start -->
+
+<!-- skills section end -->
+
+
+<!-- Team section end -->
+<section id="team" class="team padding-120">
+<div class="team-member clearfix">
+    <h2 class="h3 section-title">团队成员</h2>
+    <ul class="team-member-list">
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/xd.jpg" alt="Joyqi">
+            </a>
+            <h4>徐栋</h4>
+            <p>CCIS指导老师</p>
+        </li>
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/yzj.jpg" alt="Joyqi">
+            </a>
+            <h4>严俊哲</h4>
+            <p>CCIS社长</p>
+        </li>
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/lhd.jpg" alt="Joyqi">
+            </a>
+            <h4>林恒垌</h4>
+            <p>CCIS副社长</p>
+        </li>
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/xzy.jpg" alt="Joyqi">
+            </a>
+            <h4>徐桢艺</h4>
+            <p>CCIS技术部部长</p>
+        </li>
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/zyf.jpg" alt="Joyqi">
+            </a>
+            <h4>周雅妃</h4>
+            <p>CCIS宣传部部长</p>
+        </li>
+            <li class="member-item">
+            <a target="_blank" href="">
+                <img class="avatar" src="/static/images/csj.jpg" alt="Joyqi">
+            </a>
+            <h4>陈圣杰</h4>
+            <p>CCIS常务部部长</p>
+        </li>
+    </ul>
+</div>
+</section><!-- team -->
+<!-- Team section end -->
+
+
+
+
+
+<!-- Blog section start -->
+<section id="blog" class="blog padding-120">
+    <div class="container">
+        <div class="section-header text-center">
+            <h3>社团课程内容</h3>
+        </div>
+
+        <div class="row">
+            {% for course in courses %}
+            <div class="col-md-4 hidden-sm col-xs-12">
+                <div class="blog-item">
+                    <div class="image">
+                        <a href="/blog/9/"><img src="/media/{{ course.picture }}" alt="blog image"
+                                                class="img-responsive" style="height: 200px"></a>
+                    </div><!-- image -->
+                    <div class="content">
+                        <h4><a href="single.html">{{ course.name }}</a></h4>
+                        <ul class="post-meta">
+                            <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="">{{ course.teacher }}</a></li>
+                        </ul>
+                        <p>{{ course.classes }}</p>
+                        <a href="/blog/9/" class="default-button">Read More</a>
+                    </div><!-- content -->
+                </div><!-- blog-item -->
+            </div>
+            {% endfor %}
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- blog -->
+<!-- Blog section end -->
+
+
+{% include 'include/footer.html' %}
+
+
+<!-- jQuery -->
+<script src="/static/assets/js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/static/assets/js/bootstrap.min.js"></script>
+
+<!-- Easing -->
+<script src="/static/assets/js/jquery.easing.min.js"></script>
+
+<!-- Isotop -->
+<script src="/static/assets/js/isotope.pkgd.min.js"></script>
+
+<!-- Lightcase -->
+<script src="/static/assets/js/lightcase.js"></script>
+
+<!-- Swiper -->
+<script src="/static/assets/js/swiper.jquery.min.js"></script>
+
+<!-- WOW js -->
+<script src="/static/assets/js/wow.min.js"></script>
+
+<!-- Google Map -->
+<!--<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAQlXnmyNPAeN3c3HNyWoUMqDk6bDF31Cg"></script>
+<script src="/static/assets/js/map-function.js"></script>-->
+
+<!-- Custom -->
+<script src="/static/assets/js/custom.js"></script>
+
+<script type="text/javascript">
+    sende_mail.onsubmit = function () {
+        //form提交之前先判空
+        var nick = $("#nick").val().trim();
+        var email = $("#email").val().trim();
+        var job = $("#job").val().trim();
+        //判断是否为空
+        if (nick == "") {
+            alert("昵称不能为空");
+            return false;
+        }
+        if (email == "") {
+            alert("邮箱不能为空");
+            return false;
+        }
+        if (phone == "") {
+            alert("手机号不能为空");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</body>
+</html>

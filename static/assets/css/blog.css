@@ -1,0 +1,28 @@
+
+.blog {
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
+}
+
+.home {
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
+}
+
+.round_icon{
+  margin-top: 8%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}

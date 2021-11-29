@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+.contentDiv{
+display:inline-block;
+margin:5px auto;
+width:100px;
+height:100px;
+border-radius:100px;
+-webkit-border-radius:100px;
+-moz-border-radius:100px;
+border:2px solid #fff;
+box-shadow:0 0 4px #ccc;
+overflow:hidden;
+}
+
+/*图片的样式*/
+.contentDiv img{
+width:100%;
+min-height:100%;
+}
