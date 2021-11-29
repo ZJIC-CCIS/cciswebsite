@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>{{ blog.title }}</title>
+
+
+<link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+<!-- Bootstrap -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font-Awesome -->
+<link href="/static/assets/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Lightcase -->
+<link href="/static/assets/css/lightcase.css" rel="stylesheet">
+
+<!-- Swiper -->
+<link href="/static/assets/css/swiper.min.css" rel="stylesheet">
+
+<!-- Animate -->
+<link href="/static/assets/css/animate.css" rel="stylesheet">
+
+<!-- Style -->
+<link href="/static/assets/css/style.css" rel="stylesheet">
+
+<!-- Responsive -->
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+
+<!-- BLOG -->
+<link href="/static/assets/css/blog.css" rel="stylesheet">
+
+<link href="/static/assets/css/github-markdown.css" rel="stylesheet">
+
+
+</head>
+<body data-spy="scroll" style="background-color: cornflowerblue">
+<!-- Preloader start here -->
+<div class="preloader">
+  <div class="loader">
+  <div class="ld-child"></div>
+  <div class="ld-child ld-child2"></div>
+  </div>
+</div>
+<!-- Preloader end here -->
+
+
+{% include 'include/header.html' %}
+
+
+
+<!-- about section start -->
+<div id='blog' style="margin: 10%;" class="blog">
+  <div style="margin-top: 5%"><h2><center>{{ courses.name }}</center><h2><h4 style="margin-left: 70%;margin-top: 3%"><i>{{ courses.teacher }}</i></h4></div>
+<div style="margin-top: 5%;margin-bottom: 5%;margin-left: 12%">
+    <article class="markdown-body">{{ courses.content|safe }}</article>
+</div>
+</div>
+
+
+
+
+
+<!-- jQuery -->
+<script src="/static/assets/js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/static/assets/js/bootstrap.min.js"></script>
+
+<!-- Easing -->
+<script src="/static/assets/js/jquery.easing.min.js"></script>
+
+<!-- Isotop -->
+<script src="/static/assets/js/isotope.pkgd.min.js"></script>
+
+<!-- Lightcase -->
+<script src="/static/assets/js/lightcase.js"></script>
+
+<!-- Swiper -->
+<script src="/static/assets/js/swiper.jquery.min.js"></script>
+
+<!-- WOW js -->
+<script src="/static/assets/js/wow.min.js"></script>
+
+<!-- Google Map -->
+<!--<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAQlXnmyNPAeN3c3HNyWoUMqDk6bDF31Cg"></script>
+<script src="/static/assets/js/map-function.js"></script>-->
+
+<!-- Custom -->
+<script src="/static/assets/js/custom.js"></script>
+</body>
+</html>

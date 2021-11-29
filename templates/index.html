@@ -95,7 +95,7 @@
                         <h3>{{ notice.name }}</h3>
                         <p>{{ notice.dates}}</p>
                     </div>
-                    <a href="/rule/{{ notice.id }}/">详情</a>
+                    <a href="/notice/{{ notice.id }}/">详情</a>
                 </div>
             </div>
             {% endfor %}
@@ -178,7 +178,7 @@
             <div class="col-md-4 hidden-sm col-xs-12">
                 <div class="blog-item">
                     <div class="image">
-                        <a href="/blog/9/"><img src="/media/{{ course.picture }}" alt="blog image"
+                        <a href="/course/{{ course.id }}/"><img src="/media/{{ course.picture }}" alt="blog image"
                                                 class="img-responsive" style="height: 200px"></a>
                     </div><!-- image -->
                     <div class="content">
@@ -187,7 +187,7 @@
                             <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="">{{ course.teacher }}</a></li>
                         </ul>
                         <p>{{ course.classes }}</p>
-                        <a href="/blog/9/" class="default-button">Read More</a>
+                        <a href="/course/{{ course.id }}/" class="default-button">Read More</a>
                     </div><!-- content -->
                 </div><!-- blog-item -->
             </div>
@@ -198,7 +198,6 @@
 <!-- Blog section end -->
 
 
-{% include 'include/footer.html' %}
 
 
 <!-- jQuery -->

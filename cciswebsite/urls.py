@@ -18,9 +18,13 @@ from django.urls import path
 from cciswebsite import views
 from django.conf.urls import url, static
 from cciswebsite.settings import MEDIA_ROOT
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
+    path('course/<int:id>/',views.blog_content),
+    path('notice/<int:id>/',views.notice_content),
     url(r'^media/(?P<path>.*)', static.serve, {"document_root": MEDIA_ROOT}),
 ]
+
